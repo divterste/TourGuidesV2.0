@@ -15,6 +15,6 @@ class HomePage : AppCompatActivity() {
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         actionBar?.hide()
 
-        //actionBar!!.setBackgroundDrawable(ColorDrawable(Color.rgb(248, 248, 248)))
+        //actionBar!!.setBackgroundDrawable(ColorDrawable(Color.rgb(248, 248, 248))) blabla
     }
 }
