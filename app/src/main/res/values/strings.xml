@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">TourGuidesV2.0</string>
+    <string name="hello"><br><b>Hello!</b></br><br>
+<b>Signup to</b></br>
+<br><b>get started</b></br>
+    </string>
+
+    <string name="login"><br><b>Hello Again!</b></br><br>
+<b>Welcome</b></br>
+<br><b>back</b></br>
+    </string>
+
+    <string name="already_account">Already Have an Account? <u>Sign in</u></string>
+
+    <string-array name="users_array">
+        <item>Select the user type</item>
+        <item>Individual</item>
+        <item>Group</item>
+        <item>Family</item>
+    </string-array>
+</resources>

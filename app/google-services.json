@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1078807841532",
+    "project_id": "tourguidesv2-0",
+    "storage_bucket": "tourguidesv2-0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078807841532:android:8d102fb1067d63fe7ca579",
+        "android_client_info": {
+          "package_name": "sam.lambton.tourguidesv20"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1078807841532-5r09en7s8r2a2an3uatv96ld43fl2p9d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdI53rjHFbuviZZ6zVYjkOyfLaUnPnoS4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1078807841532-5r09en7s8r2a2an3uatv96ld43fl2p9d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
