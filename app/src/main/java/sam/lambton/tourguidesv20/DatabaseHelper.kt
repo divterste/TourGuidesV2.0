@@ -45,6 +45,25 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         return insert != -1L
     }
 
+    fun loginValidation(signUpModel: SignUpModel): Boolean{
+        val dbRead : SQLiteDatabase = this.readableDatabase
+        val cursor: Cursor = dbRead.rawQuery("SELECT * FROM SIGNUP", null)
+
+        if(cursor.moveToFirst()) {
+            do {
+                val email: String = cursor.getString(1)
+                val password: String = cursor.getString(3)
+
+                if((email == signUpModel.email) and (password == signUpModel.password))
+                {
+                    cursor.close()
+                    return true
+                }
+            } while (cursor.moveToNext())
+        }
+        return false
+    }
+
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         TODO("Not yet implemented")
     }
