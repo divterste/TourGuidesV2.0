@@ -103,6 +103,155 @@
 
     </FrameLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/flTop"
+        app:layout_constraintLeft_toLeftOf="@id/flTop"
+        app:layout_constraintBottom_toBottomOf="@id/parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🌞 Summer Packages"
+                android:textSize="24sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
+
+
+            <ScrollView
+                app:layout_constraintTop_toBottomOf="@id/tvExplore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#FEF9A7">
+
+                        <ImageButton
+                            android:layout_width="300dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="20dp"
+                            android:elevation="20dp"
+                            android:background="@color/white"
+                            android:src="@drawable/summer"
+                            android:scaleType="fitXY"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="☀️ SUMMER"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:layout_marginBottom="20dp"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#eae6e3">
+
+                        <ImageButton
+                            android:layout_width="300dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="20dp"
+                            android:elevation="20dp"
+                            android:background="@color/white"
+                            android:src="@drawable/winter"
+                            android:scaleType="fitXY"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="❄️ WINTER"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:layout_marginBottom="20dp"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#feabab">
+
+                        <ImageButton
+                            android:layout_width="300dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="20dp"
+                            android:elevation="20dp"
+                            android:background="@color/white"
+                            android:src="@drawable/custom"
+                            android:scaleType="fitXY"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="⚙️ CUSTOM"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:layout_marginBottom="20dp"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🌍 Big World Wonders"
+                android:textSize="24sp"
+                android:layout_margin="20dp"
+                android:textColor="@color/black"/>
+
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="20dp"
+                android:background="@color/white"
+                android:src="@drawable/summer"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About us"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The aim of our initiative is to provide a basic understanding of some common conversations that travelers may encounter in the various locations they will visit after arriving in Canada. ‘Big World Wonders' will be an Android application that allows users to choose their desired package and destination. Summer and winter sessional trips will be available through the application. The mobile app also has login and signup features, and it will ask for your preferences, such as whether you want to go on a family trip, an individual excursion, or a group tour. "
+                android:layout_margin="20dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

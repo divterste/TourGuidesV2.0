@@ -135,6 +135,7 @@
                 android:scrollbars="none">
 
                 <LinearLayout
+                    android:id="@+id/packagesHorizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -143,25 +144,39 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:background="#FEF9A7">
+                        android:background="#FEF9A7"
+                        android:layout_margin="10dp">
 
-                        <ImageButton
+                        <androidx.cardview.widget.CardView
                             android:layout_width="300dp"
                             android:layout_height="200dp"
                             android:layout_margin="20dp"
+                            app:cardCornerRadius="20dp"
                             android:elevation="20dp"
-                            android:background="@color/white"
-                            android:src="@drawable/summer"
-                            android:scaleType="fitXY"/>
+                            android:id="@+id/summerCard">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="☀️ SUMMER"
-                            android:textStyle="bold"
-                            android:textAlignment="center"
-                            android:layout_marginBottom="20dp"
-                            android:textSize="16sp"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="☀️ SUMMER"
+                                android:textStyle="bold"
+                                android:textAlignment="viewStart"
+                                android:layout_margin="10dp"
+                                android:textSize="16sp"/>
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:elevation="20dp"
+                                android:background="@color/white"
+                                android:src="@drawable/summer"
+                                android:scaleType="fitXY"/>
+
+                        </androidx.cardview.widget.CardView>
 
                     </LinearLayout>
 
@@ -169,25 +184,39 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:background="#eae6e3">
+                        android:background="#FEF9A7"
+                        android:layout_margin="10dp">
 
-                        <ImageButton
+                        <androidx.cardview.widget.CardView
                             android:layout_width="300dp"
                             android:layout_height="200dp"
                             android:layout_margin="20dp"
+                            app:cardCornerRadius="20dp"
                             android:elevation="20dp"
-                            android:background="@color/white"
-                            android:src="@drawable/winter"
-                            android:scaleType="fitXY"/>
+                            android:id="@+id/winterCard">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="❄️ WINTER"
-                            android:textStyle="bold"
-                            android:textAlignment="center"
-                            android:layout_marginBottom="20dp"
-                            android:textSize="16sp"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="⛄️ WINTER"
+                                android:textStyle="bold"
+                                android:textAlignment="viewStart"
+                                android:layout_margin="10dp"
+                                android:textSize="16sp"/>
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:elevation="20dp"
+                                android:background="@color/white"
+                                android:src="@drawable/winter"
+                                android:scaleType="fitXY"/>
+
+                        </androidx.cardview.widget.CardView>
 
                     </LinearLayout>
 
@@ -195,25 +224,39 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:background="#feabab">
+                        android:background="#FEF9A7"
+                        android:layout_margin="10dp">
 
-                        <ImageButton
+                        <androidx.cardview.widget.CardView
                             android:layout_width="300dp"
                             android:layout_height="200dp"
                             android:layout_margin="20dp"
+                            app:cardCornerRadius="20dp"
                             android:elevation="20dp"
-                            android:background="@color/white"
-                            android:src="@drawable/custom"
-                            android:scaleType="fitXY"/>
+                            android:id="@+id/customCard">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="⚙️ CUSTOM"
-                            android:textStyle="bold"
-                            android:textAlignment="center"
-                            android:layout_marginBottom="20dp"
-                            android:textSize="16sp"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="⚙️ CUSTOM"
+                                android:textStyle="bold"
+                                android:textAlignment="viewStart"
+                                android:layout_margin="10dp"
+                                android:textSize="16sp"/>
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:elevation="20dp"
+                                android:background="@color/white"
+                                android:src="@drawable/custom"
+                                android:scaleType="fitXY"/>
+
+                        </androidx.cardview.widget.CardView>
 
                     </LinearLayout>
 
