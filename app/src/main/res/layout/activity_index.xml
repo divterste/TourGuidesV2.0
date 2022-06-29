@@ -119,37 +119,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="🌍 Big World Wonders"
-                android:textSize="24sp"
-                android:layout_margin="20dp"
-                android:textColor="@color/black"/>
-
-
-            <ImageButton
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_margin="20dp"
-                android:background="@color/white"
-                android:src="@drawable/summer"
-                android:scaleType="fitXY"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Who are we?"
-                android:layout_marginLeft="20dp"
-                android:textStyle="bold"
-                android:textSize="16sp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="The aim of our initiative is to provide a basic understanding of some common conversations that travelers may encounter in the various locations they will visit after arriving in Canada. ‘Big World Wonders' will be an Android application that allows users to choose their desired package and destination. Summer and winter sessional trips will be available through the application. The mobile app also has login and signup features, and it will ask for your preferences, such as whether you want to go on a family trip, an individual excursion, or a group tour. "
-                android:layout_margin="20dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:text="📦 Our Packages"
                 android:textSize="24sp"
                 android:layout_marginLeft="20dp"
@@ -251,6 +220,37 @@
                 </LinearLayout>
 
             </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🌍 Big World Wonders"
+                android:textSize="24sp"
+                android:layout_margin="20dp"
+                android:textColor="@color/black"/>
+
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="20dp"
+                android:background="@color/white"
+                android:src="@drawable/summer"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About us"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The aim of our initiative is to provide a basic understanding of some common conversations that travelers may encounter in the various locations they will visit after arriving in Canada. ‘Big World Wonders' will be an Android application that allows users to choose their desired package and destination. Summer and winter sessional trips will be available through the application. The mobile app also has login and signup features, and it will ask for your preferences, such as whether you want to go on a family trip, an individual excursion, or a group tour. "
+                android:layout_margin="20dp"/>
 
         </LinearLayout>
 
