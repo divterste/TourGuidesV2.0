@@ -248,7 +248,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="☀️ Woodbine beach, Toronto"
+                                android:text="☀️ Falls view, Niagara"
                                 android:textStyle="bold"
                                 android:textAlignment="viewStart"
                                 android:layout_margin="10dp"
@@ -262,7 +262,7 @@
                                 android:layout_marginRight="10dp"
                                 android:layout_marginBottom="10dp"
                                 android:elevation="20dp"
-                                android:background="@drawable/tofino"
+                                android:background="@drawable/niagara"
                                 android:scaleType="fitXY">
 
                                 <Button
