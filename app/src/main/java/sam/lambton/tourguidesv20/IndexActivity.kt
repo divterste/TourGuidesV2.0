@@ -15,10 +15,18 @@ class IndexActivity : AppCompatActivity() {
 
 
         val summerKnowMore : Button = findViewById(R.id.summerKnowMore)
+        val winterKnowMore : Button = findViewById(R.id.winterKnowMore)
 
         summerKnowMore.setOnClickListener {
             //Toast.makeText(this, "Summer clicked", Toast.LENGTH_LONG).show()
             val intent = Intent(applicationContext, SummerActivity::class.java)
+            startActivity(intent)
+        }
+
+         // setting intent for winter
+        winterKnowMore.setOnClickListener {
+            //Toast.makeText(this, "Summer clicked", Toast.LENGTH_LONG).show()
+            val intent = Intent(applicationContext, WinterActivity::class.java)
             startActivity(intent)
         }
 
