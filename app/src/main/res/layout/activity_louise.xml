@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/louisebg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="358dp"
+        android:padding="40dp">
+
+        <TextView
+            android:id="@+id/hello"
+            android:layout_width="237dp"
+            android:layout_height="228dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="sans-serif"
+            android:text="Book An Amazing Holiday Package "
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true">
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scroolView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#8a070707"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lake louise, Alberta"
+                    android:layout_marginTop="12dp"
+                    android:textColor="#fff"
+                    android:textSize="23dp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-black"
+                    android:layout_marginLeft="40dp">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$1800"
+                    android:layout_marginTop="12dp"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="40dp">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3 Days/ 2 Night"
+                    android:layout_marginTop="12dp"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="40dp">
+                </TextView>
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:text="Lake Louise is a hamlet in Banff National Park in the Canadian Rockies, known for its turquoise, glacier-fed lake ringed by high peaks and overlooked by a stately chateau. Hiking trails wind up to the Lake Agnes Tea House for bird's-eye views. There's a canoe dock in summer, and a skating rink on the frozen lake in winter. The Lake Louise Ski Resort features a wildlife interpretive center at the top of a gondola.The month of October usually brings heavy snowfall in the area, and the Lake Louise Ski Resort usually opens up the first week of November around the same time the lake freezes."
+                    android:textColor="@color/white"
+                    android:textSize="16sp">
+                </TextView>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Book a package"
+                    android:background="@drawable/button_style_know_more"
+                    android:layout_gravity="bottom|center"
+                    android:layout_margin="20dp"/>
+            </LinearLayout>
+        </ScrollView>
+    </ScrollView>
+</LinearLayout>

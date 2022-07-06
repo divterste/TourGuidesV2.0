@@ -176,6 +176,7 @@
                                 android:scaleType="fitXY">
 
                                 <Button
+                                    android:id="@+id/BtnBanff"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Know more"
@@ -226,6 +227,7 @@
                                 android:scaleType="fitXY">
 
                                 <Button
+                                    android:id="@+id/BtnLouise"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Know more"
@@ -263,7 +265,7 @@
                                 android:textAlignment="viewStart"
                                 android:layout_margin="10dp"
                                 android:textSize="16sp"/>
-//delete me
+
                             <FrameLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="280dp"
@@ -276,6 +278,7 @@
                                 android:scaleType="fitXY">
 
                                 <Button
+                                    android:id="@+id/BtnEdmonton"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Know more"
