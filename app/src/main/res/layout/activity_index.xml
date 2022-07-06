@@ -75,7 +75,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="20dp"
-                                android:text="♨️ Spring"
+                                android:text="Winter"
                                 android:textSize="16sp"
                                 android:textColor="@color/black"
                                 android:backgroundTint="@color/white"
@@ -85,7 +85,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="20dp"
-                                android:text="☀️ Summer"
+                                android:text="Summer"
                                 android:textSize="16sp"
                                 android:textColor="@color/black"
                                 android:backgroundTint="@color/white"
@@ -95,21 +95,12 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="20dp"
-                                android:text="🍂 Autumn"
+                                android:text="Custom"
                                 android:textSize="16sp"
                                 android:textColor="@color/black"
                                 android:backgroundTint="@color/white"
                                 app:cornerRadius="24dp" />
 
-                            <com.google.android.material.button.MaterialButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginRight="20dp"
-                                android:text="❄️ Winter"
-                                android:textSize="16sp"
-                                android:textColor="@color/black"
-                                android:backgroundTint="@color/white"
-                                app:cornerRadius="24dp" />
 
                         </LinearLayout>
 
@@ -284,6 +275,7 @@
                                     android:scaleType="fitXY">
 
                                     <Button
+                                        android:id="@+id/customKnowMore"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="All packages"
