@@ -118,25 +118,47 @@
 
             </FrameLayout>
 
-            <ImageView
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/logo"
-                android:background="#fbdcc4"/>
+                android:layout_height="wrap_content"
+                android:text="BIG WORLD WONDERS"
+                android:layout_margin="10dp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:background="#6ce768"
+                android:padding="10dp"
+                android:textAlignment="center"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#acf1aa"
+                android:padding="10dp"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/logo"/>
+
+            </FrameLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
-                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
+                android:text="BigWorldWonders is a Group of touristic agencies with customizable tours and vacation services.
+Through the network of agencies throughout popular international destinations. BWW is offering a highly customizable personal, group and family tours to popular tourist destinations, both for summer and winter vacations at a competitive price.
+" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="10"
-                android:layout_margin="10dp">
+                android:layout_margin="10dp"
+                android:gravity="center">
 
                 <ImageButton
                     android:id="@+id/facebook"
@@ -145,7 +167,6 @@
                     android:src="@drawable/facebook"
                     android:background="@drawable/round_corner"
                     android:scaleType="fitXY"
-                    android:layout_marginLeft="20dp"
                     android:layout_weight="1"/>
 
                 <ImageButton
@@ -169,6 +190,14 @@
                     android:layout_weight="1"/>
 
             </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/light_blue"
+                android:text="Email: bigworldwonders@customerservice.com"
+                android:textAlignment="center"
+                android:layout_margin="10dp"/>
 
         </LinearLayout>
 
