@@ -64,6 +64,28 @@ class CustomCreateActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
             spinnerDestination.adapter = adapter
         }
 
+        val spinnerAirlines: Spinner = findViewById(R.id.spinnerAirlines)
+        spinnerAirlines.onItemSelectedListener = this
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.airlines_array,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            spinnerAirlines.adapter = adapter
+        }
+
+        val spinnerHotels: Spinner = findViewById(R.id.spinnerHotels)
+        spinnerHotels.onItemSelectedListener = this
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.hotels_array,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            spinnerHotels.adapter = adapter
+        }
+
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {

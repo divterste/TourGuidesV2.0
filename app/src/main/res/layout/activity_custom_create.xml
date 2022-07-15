@@ -29,7 +29,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-
     </RelativeLayout>
 
 
@@ -43,16 +42,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#8a070707"
-            android:orientation="vertical"
-            android:layout_margin="10dp">
+            android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="60dp"
-                app:cardCornerRadius="20dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="40dp"
                 android:elevation="20dp"
                 android:id="@+id/summerCard">
 
@@ -64,11 +62,19 @@
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Enter Package Name"
+                        android:hint="📒 Enter Package Name"
                         android:layout_margin="10dp"
-                        android:background="@drawable/edittextstyle"
                         android:paddingTop="16dp"
                         android:paddingBottom="16dp"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="📒 Enter Package Description"
+                        android:layout_margin="10dp"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp"
+                        android:inputType="textMultiLine"/>
 
                     <Spinner
                         android:id="@+id/sourceType"
@@ -81,6 +87,24 @@
 
                     <Spinner
                         android:id="@+id/destinationType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittextstyle"
+                        android:layout_margin="10dp"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp"/>
+
+                    <Spinner
+                        android:id="@+id/spinnerAirlines"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittextstyle"
+                        android:layout_margin="10dp"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp"/>
+
+                    <Spinner
+                        android:id="@+id/spinnerHotels"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/edittextstyle"
@@ -107,24 +131,6 @@
                         android:layout_margin="10dp"
                         android:clickable="true"
                         android:focusable="false"/>
-
-                    <EditText
-                        android:id="@+id/etPrice"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="📅 Set Max Price"
-                        android:inputType="number"
-                        android:layout_margin="10dp"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <TextView
-                        android:id="@+id/tvPrice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"
-                        android:textSize="18sp"
-                        android:layout_gravity="center"/>
 
                 </LinearLayout>
 
