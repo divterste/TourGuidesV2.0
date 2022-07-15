@@ -109,11 +109,22 @@
                         android:focusable="false"/>
 
                     <EditText
+                        android:id="@+id/etPrice"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Price Range"
+                        android:hint="📅 Set Max Price"
                         android:inputType="number"
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:clickable="true"
+                        android:focusable="false"/>
+
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="18sp"
+                        android:layout_gravity="center"/>
 
                 </LinearLayout>
 

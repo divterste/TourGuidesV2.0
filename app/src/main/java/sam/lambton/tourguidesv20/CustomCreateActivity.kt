@@ -63,6 +63,7 @@ class CustomCreateActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             spinnerDestination.adapter = adapter
         }
+
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
@@ -108,8 +109,6 @@ class CustomCreateActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
         )
         dpd.datePicker.minDate = System.currentTimeMillis()
         dpd.datePicker.maxDate = System.currentTimeMillis() + 1000*60*60*24*30
-        /*val now : Long = System.currentTimeMillis() - 1000;
-        dpd.datePicker.maxDate(now+(1000*60*60*24*30))*/
         dpd.show()
     }
 }
