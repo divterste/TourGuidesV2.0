@@ -18,6 +18,21 @@
         <item>Group</item>
         <item>Family</item>
     </string-array>
+
+    <string-array name="destination_array">
+        <item>Select the destination</item>
+        <item>Banff</item>
+        <item>Tofino</item>
+        <item>Woodbine Beach</item>
+    </string-array>
+
+    <string-array name="source_array">
+        <item>Select the source</item>
+        <item>Toronto</item>
+        <item>Oakville</item>
+        <item>Richmond Hill</item>
+    </string-array>
+
     <string name="title_activity_summer">SummerActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

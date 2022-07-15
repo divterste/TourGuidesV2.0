@@ -10,9 +10,9 @@ class CustomActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_custom)
 
-        val BtnCreatePackage : Button = findViewById(R.id.BtnCreatePackage)
+        val btnCreatePackage : Button = findViewById(R.id.BtnCreatePackage)
 
-        BtnCreatePackage.setOnClickListener {
+        btnCreatePackage.setOnClickListener {
             //Toast.makeText(this, "Summer clicked", Toast.LENGTH_LONG).show()
             val intent = Intent(applicationContext, CustomCreateActivity::class.java)
             startActivity(intent)
