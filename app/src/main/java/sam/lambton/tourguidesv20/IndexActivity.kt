@@ -1,12 +1,9 @@
 package sam.lambton.tourguidesv20
 
 import android.content.Intent
-import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.*
-import androidx.cardview.widget.CardView
 
 class IndexActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,9 +11,9 @@ class IndexActivity : AppCompatActivity() {
         setContentView(R.layout.activity_index)
 
 
-        val summerKnowMore : Button = findViewById(R.id.summerKnowMore)
-        val winterKnowMore : Button = findViewById(R.id.winterKnowMore)
-        val custombutton : Button = findViewById(R.id.customKnowMore)
+        val summerKnowMore : Button = findViewById(R.id.summerAll)
+        val winterKnowMore : Button = findViewById(R.id.winterAll)
+        val custombutton : Button = findViewById(R.id.customAll)
 
 
         summerKnowMore.setOnClickListener {

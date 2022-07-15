@@ -75,7 +75,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="20dp"
-                                android:text="Winter"
+                                android:text="@string/winter"
                                 android:textSize="16sp"
                                 android:textColor="@color/black"
                                 android:backgroundTint="@color/white"
@@ -85,7 +85,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="20dp"
-                                android:text="Summer"
+                                android:text="@string/summer"
                                 android:textSize="16sp"
                                 android:textColor="@color/black"
                                 android:backgroundTint="@color/white"
@@ -95,7 +95,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="20dp"
-                                android:text="Custom"
+                                android:text="@string/custom"
                                 android:textSize="16sp"
                                 android:textColor="@color/black"
                                 android:backgroundTint="@color/white"
@@ -173,7 +173,7 @@
                                     android:scaleType="fitXY">
 
                                     <Button
-                                        android:id="@+id/summerKnowMore"
+                                        android:id="@+id/summerAll"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="All packages"
@@ -224,7 +224,7 @@
                                     android:scaleType="fitXY">
 
                                     <Button
-                                        android:id="@+id/winterKnowMore"
+                                        android:id="@+id/winterAll"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="All packages"
@@ -275,7 +275,7 @@
                                     android:scaleType="fitXY">
 
                                     <Button
-                                        android:id="@+id/customKnowMore"
+                                        android:id="@+id/customAll"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="All packages"
