@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/tofinobg">
+    android:background="@drawable/woodbinebg">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,7 +59,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tofino, British Columbia"
+                    android:text="Woodbine Beach, Toronto"
                     android:layout_marginTop="12dp"
                     android:textColor="#fff"
                     android:textSize="23dp"
@@ -70,7 +70,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="$1500"
+                    android:text="$1800"
                     android:layout_marginTop="12dp"
                     android:textColor="#fff"
                     android:textSize="20dp"
@@ -79,7 +79,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="3 Days/ 2 Night"
+                    android:text="4 Days/ 3 Night"
                     android:layout_marginTop="12dp"
                     android:textColor="#fff"
                     android:textSize="20dp"
@@ -92,7 +92,9 @@
                     android:layout_marginTop="12dp"
                     android:layout_marginLeft="35dp"
                     android:layout_marginRight="35dp"
-                    android:text="Tofino is a small district on Vancouver Island, off Canada's west coast. It sprawls on a peninsula within Clayoquot Sound, characterised by wild natural scenery including lakes, inlets and ancient rainforest. Sandy beaches with year-round surfing facilities include Cox Bay, Chesterman Beach and popular Long Beach, part of the Pacific Rim National Park Reserve.The relaxed town of Tofino sits on the peninsula's tip.The sunsets in Tofino are spectacular. Chesterman Beach is a well-known beach. There is a ferry terminal that travels from Horseshoe Bay to Vancouver in just over an hour."
+                    android:text="A broad and beautiful curve of sand at the foot of Woodbine Avenue, this popular 15.2-hectare park is one of the city's many beaches and the gateway to three kilometres of sandy waterfront stretching eastward along the Lake Ontario shoreline. Woodbine Beach is a popular spot for picnics, sunbathing and swimming with wide stretches of sand, summer lifeguards, a bathing station and the Donald D. Summerville Outdoor Olympic Pool nearby. The recently renovated bathing station features upgraded ventilation and lighting, a new roof, an enlarged patio, change rooms, accessible washrooms, water bottle filling stations and a beach shower with a foot wash. The Ashbridges Bay and Martin Goodman trails run through this park, which also includes a playground, outdoor fitness equipment, beach volleyball courts, picnic shelters, snack bar, full-service restaurant and parking at Ashbridges Bay Park.
+                        Accessibility: A beach wheelchair can be rented for free by calling 311 and picked-up at the Donald D. Summerville Outdoor Pool. Note: Due to large, smooth tires, wheelchairs can’t be pushed manually and require a support person.
+                        This beach has expanded mesh plastic mats reaching all the way to the water’s edge"
                     android:textColor="@color/white"
                     android:textSize="16sp">
                 </TextView>
