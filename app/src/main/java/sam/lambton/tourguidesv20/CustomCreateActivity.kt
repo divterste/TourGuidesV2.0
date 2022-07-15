@@ -18,6 +18,7 @@ class CustomCreateActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
     private var spinnerItem: String? = null
     private var tvSelectedDate : EditText? = null
     private var etStartDate: EditText? = null
+    private var etEndDate: EditText? = null
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,8 +38,8 @@ class CustomCreateActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
             clickDatePicker(etStartDate)
         }
 
-        val etEndDate: EditText = findViewById(R.id.etEndDate)
-        etEndDate.setOnClickListener {
+        etEndDate = findViewById(R.id.etEndDate)
+        etEndDate?.setOnClickListener {
             clickDatePicker(etEndDate)
         }
 
@@ -130,7 +131,6 @@ class CustomCreateActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
             day
         )
         dpd.datePicker.minDate = System.currentTimeMillis()
-        dpd.datePicker.maxDate = System.currentTimeMillis() + 1000*60*60*24*30
         dpd.show()
     }
 }

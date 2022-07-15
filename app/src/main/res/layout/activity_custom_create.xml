@@ -21,7 +21,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="50dp"
             android:fontFamily="sans-serif"
-            android:text="Create An Amazing Holiday Package "
+            android:text="Create Your Own Amazing Holiday Package "
             android:textColor="@color/white"
             android:textSize="40sp"
             android:textStyle="bold"
@@ -47,9 +47,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_margin="10dp"
                 app:cardCornerRadius="40dp"
                 android:elevation="20dp"
                 android:id="@+id/summerCard">
@@ -62,19 +60,21 @@
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="📒 Enter Package Name"
+                        android:hint="Enter package name"
                         android:layout_margin="10dp"
                         android:paddingTop="16dp"
-                        android:paddingBottom="16dp"/>
+                        android:paddingBottom="16dp"
+                        android:textAlignment="center"/>
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="📒 Enter Package Description"
+                        android:hint="Enter package description"
                         android:layout_margin="10dp"
                         android:paddingTop="16dp"
                         android:paddingBottom="16dp"
-                        android:inputType="textMultiLine"/>
+                        android:inputType="textMultiLine"
+                        android:textAlignment="center"/>
 
                     <Spinner
                         android:id="@+id/sourceType"
@@ -83,7 +83,8 @@
                         android:background="@drawable/edittextstyle"
                         android:layout_margin="10dp"
                         android:paddingTop="18dp"
-                        android:paddingBottom="18dp"/>
+                        android:paddingBottom="18dp"
+                        android:textAlignment="center"/>
 
                     <Spinner
                         android:id="@+id/destinationType"
@@ -92,7 +93,8 @@
                         android:background="@drawable/edittextstyle"
                         android:layout_margin="10dp"
                         android:paddingTop="18dp"
-                        android:paddingBottom="18dp"/>
+                        android:paddingBottom="18dp"
+                        android:textAlignment="center"/>
 
                     <Spinner
                         android:id="@+id/spinnerAirlines"
@@ -101,7 +103,8 @@
                         android:background="@drawable/edittextstyle"
                         android:layout_margin="10dp"
                         android:paddingTop="18dp"
-                        android:paddingBottom="18dp"/>
+                        android:paddingBottom="18dp"
+                        android:textAlignment="center"/>
 
                     <Spinner
                         android:id="@+id/spinnerHotels"
@@ -110,7 +113,8 @@
                         android:background="@drawable/edittextstyle"
                         android:layout_margin="10dp"
                         android:paddingTop="18dp"
-                        android:paddingBottom="18dp"/>
+                        android:paddingBottom="18dp"
+                        android:textAlignment="center"/>
 
                     <EditText
                         android:id="@+id/etStartDate"

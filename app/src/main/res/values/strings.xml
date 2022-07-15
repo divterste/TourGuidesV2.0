@@ -19,35 +19,39 @@
         <item>Family</item>
     </string-array>
 
-    <string-array name="destination_array">
-        <item>Select the destination</item>
-        <item>BANFF NATIONAL PARK, ALBERTA</item>
-        <item>TOFINO, BRITISH COLUMBIA</item>
-        <item>LAKE LOUISE, ALBERTA</item>
-        <item>EDMONTON, ALBERTA</item>
-    </string-array>
-
     <string-array name="source_array">
         <item>Select the source</item>
-        <item>TORONTO</item>
-        <item>OAKVILLE</item>
-        <item>RICHMOND HILL</item>
+        <item>Toronto</item>
+        <item>Oakville</item>
+        <item>Richmond Hill</item>
+        <item>Niagara</item>
+    </string-array>
+
+
+    <string-array name="destination_array">
+        <item>Select the destination</item>
+        <item>Banff National Park, Alberta</item>
+        <item>Tofino, British Columbia</item>
+        <item>Lake Louise, Alberta</item>
+        <item>Edmonton, Alberta</item>
     </string-array>
 
     <string-array name="airlines_array">
-        <item>Select preferred airline</item>
+        <item>Airline Preference</item>
         <item>Air Canada</item>
         <item>Pal Airlines</item>
         <item>West Coast Air</item>
         <item>Sunwest Aviation</item>
+        <item>none</item>
     </string-array>
 
     <string-array name="hotels_array">
-        <item>Select preferred hotels</item>
+        <item>Hotel Preference</item>
         <item>Hilton Hotels And Resorts</item>
         <item>Wingate By Wyndham</item>
         <item>Park Inn By Radisson</item>
         <item>Microtel Inn By Wyndham</item>
+        <item>none</item>
     </string-array>
 
     <string name="title_activity_summer">SummerActivity</string>
