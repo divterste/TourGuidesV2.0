@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SummerActivity">
+    tools:context=".CustomSeeAllPackagesActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,7 +16,6 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="vertical">
-
 
             <FrameLayout
                 android:id="@+id/flTop"
@@ -115,87 +114,97 @@
                 android:layout_marginTop="20dp"
                 android:textColor="@color/black"/>
 
-            <ScrollView
-                app:layout_constraintTop_toBottomOf="@id/tvExplore"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:scrollbars="none">
+        <LinearLayout
+            android:id="@+id/llCustomCards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FEF9A7"
+            android:layout_margin="10dp">
 
-                <LinearLayout
-                    android:id="@+id/packagesHorizontal"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvFormat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="20dp"
+                android:elevation="20dp">
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:text="Custom Package Name #1"
+                    android:textStyle="bold"
+                    android:textAlignment="viewStart"
+                    android:layout_margin="10dp"
+                    android:textSize="16sp"/>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="#FEF9A7"
-                        android:layout_margin="10dp">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="20dp"
-                            app:cardCornerRadius="20dp"
-                            android:elevation="20dp"
-                            android:id="@+id/summerCard">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Create Your Own Package"
-                                android:textStyle="bold"
-                                android:textAlignment="viewStart"
-                                android:layout_margin="10dp"
-                                android:textSize="16sp"/>
-
-                            <FrameLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="280dp"
-                                android:layout_marginTop="40dp"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:elevation="20dp"
-                                android:background="@drawable/customcardcreate"
-                                android:scaleType="fitXY">
-
-                                <Button
-                                    android:id="@+id/BtnCreatePackage"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Know more"
-                                    android:background="@drawable/button_style_know_more"
-                                    app:backgroundTint="@null"
-                                    android:layout_margin="20dp"
-                                    android:layout_gravity="bottom|right"/>
-
-                            </FrameLayout>
-
-                        </androidx.cardview.widget.CardView>
-
-                    </LinearLayout>
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="280dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:elevation="20dp"
+                    android:background="@drawable/customcardcreate"
+                    android:scaleType="fitXY">
 
                     <Button
-                        android:id="@+id/btnViewAllPackages"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="View All Packages"
-                        android:background="@drawable/button_style"
+                        android:text="Know more"
+                        android:background="@drawable/button_style_know_more"
                         app:backgroundTint="@null"
-                        app:layout_constraintRight_toRightOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:layout_margin="10dp"
-                        android:layout_gravity="start"/>
+                        android:layout_margin="20dp"
+                        android:layout_gravity="bottom|right"/>
 
-                </LinearLayout>
+                </FrameLayout>
 
-            </ScrollView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="20dp"
+                android:elevation="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Custom Package Name #2"
+                    android:textStyle="bold"
+                    android:textAlignment="viewStart"
+                    android:layout_margin="10dp"
+                    android:textSize="16sp"/>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="280dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:elevation="20dp"
+                    android:background="@drawable/customcardcreate"
+                    android:scaleType="fitXY">
+
+                    <Button
+                        android:id="@+id/BtnCreatePackage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Know more"
+                        android:background="@drawable/button_style_know_more"
+                        app:backgroundTint="@null"
+                        android:layout_margin="20dp"
+                        android:layout_gravity="bottom|right"/>
+
+                </FrameLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
 
         </LinearLayout>
 

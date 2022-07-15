@@ -17,5 +17,13 @@ class CustomActivity : AppCompatActivity() {
             val intent = Intent(applicationContext, CustomCreateActivity::class.java)
             startActivity(intent)
         }
+
+        val btnSeeAllPackages : Button = findViewById(R.id.btnViewAllPackages)
+
+        btnSeeAllPackages.setOnClickListener {
+            //Toast.makeText(this, "Summer clicked", Toast.LENGTH_LONG).show()
+            val intent = Intent(applicationContext, CustomSeeAllPackagesActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
