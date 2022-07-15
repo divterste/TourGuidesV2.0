@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/tofinobg">
+    android:background="@drawable/nigarabg">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,7 +59,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tofino, British Columbia"
+                    android:text="Nigara falls, Ontario"
                     android:layout_marginTop="12dp"
                     android:textColor="#fff"
                     android:textSize="23dp"
@@ -70,7 +70,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="$1500"
+                    android:text="$1800"
                     android:layout_marginTop="12dp"
                     android:textColor="#fff"
                     android:textSize="20dp"
@@ -79,7 +79,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="3 Days/ 2 Night"
+                    android:text="4 Days/ 3 Night"
                     android:layout_marginTop="12dp"
                     android:textColor="#fff"
                     android:textSize="20dp"
@@ -92,7 +92,9 @@
                     android:layout_marginTop="12dp"
                     android:layout_marginLeft="35dp"
                     android:layout_marginRight="35dp"
-                    android:text="Tofino is a small district on Vancouver Island, off Canada's west coast. It sprawls on a peninsula within Clayoquot Sound, characterised by wild natural scenery including lakes, inlets and ancient rainforest. Sandy beaches with year-round surfing facilities include Cox Bay, Chesterman Beach and popular Long Beach, part of the Pacific Rim National Park Reserve.The relaxed town of Tofino sits on the peninsula's tip.The sunsets in Tofino are spectacular. Chesterman Beach is a well-known beach. There is a ferry terminal that travels from Horseshoe Bay to Vancouver in just over an hour."
+                    android:text="Niagara Falls, Ontario, is a Canadian city at the famous waterfalls of the same name, linked with the U.S. by the Rainbow Bridge. Its site on the Niagara River's western shore overlooks the Horseshoe Falls, the cascades' most expansive section. Elevators take visitors to a lower, wetter vantage point behind the falls. A cliffside park features a promenade alongside 520-ft.-high Skylon Tower with an observation deck
+Niagara Falls is a city in Ontario, Canada. It is on the western bank of the Niagara River in the Golden Horseshoe region of Southern Ontario, with a population of 88,071 at the 2016 census.[1] It is part of the St. Catharines - Niagara Census Metropolitan Area (CMA). Incorporated on 12 June 1903, the city is across the river from Niagara Falls, New York. The Niagara River flows over Niagara Falls at this location, creating a natural spectacle which attracts millions of tourists each year.
+The tourist area near the falls includes observation towers, high-rise hotels, souvenir shops, museums, indoor water parks, casinos and theatres, mostly with colourful neon billboards and advertisements. Other parts of the city include golf courses, parks, historic sites from the War of 1812, and residential neighbourhoods."
                     android:textColor="@color/white"
                     android:textSize="16sp">
                 </TextView>

@@ -218,13 +218,14 @@
                                 android:scaleType="fitXY">
 
                                 <Button
+                                    android:id="@+id/woodbinekmore"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Know more"
-                                    android:background="@drawable/button_style_know_more"
-                                    app:backgroundTint="@null"
+                                    android:layout_gravity="bottom|right"
                                     android:layout_margin="20dp"
-                                    android:layout_gravity="bottom|right"/>
+                                    android:background="@drawable/button_style_know_more"
+                                    android:text="Know more"
+                                    app:backgroundTint="@null" />
 
                             </FrameLayout>
 
@@ -268,6 +269,7 @@
                                 android:scaleType="fitXY">
 
                                 <Button
+                                    android:id="@+id/NigaraKmore"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Know more"
