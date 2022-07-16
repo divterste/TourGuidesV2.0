@@ -32,6 +32,12 @@
             android:name=".TofinoActivity"
             android:exported="false" />
         <activity
+            android:name=".WoodbineActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NigaraActivity"
+            android:exported="false" />
+        <activity
             android:name=".WinterActivity"
             android:exported="false" />
         <activity

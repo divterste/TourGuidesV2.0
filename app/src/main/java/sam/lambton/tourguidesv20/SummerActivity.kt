@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.content.Intent
+import android.widget.Toast
 
 class SummerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +25,7 @@ class SummerActivity : AppCompatActivity() {
 
         woodbinebutton.setOnClickListener {
             //Toast.makeText(this, "Summer clicked", Toast.LENGTH_LONG).show()
-            val intent = Intent(applicationContext, WoodbineActivity::class.java)
+            val intent = Intent(applicationContext, WoodbineActivity ::class.java)
             startActivity(intent)
         }
         Nigarabutton.setOnClickListener {
