@@ -141,14 +141,14 @@
                     android:gravity="center">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:background="#B8FFF9"
                         android:layout_margin="10dp">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="20dp"
                             app:cardCornerRadius="20dp"
@@ -165,15 +165,21 @@
                                 android:textSize="16sp"/>
 
                             <FrameLayout
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="280dp"
                                 android:layout_marginTop="40dp"
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginRight="10dp"
                                 android:layout_marginBottom="10dp"
                                 android:elevation="20dp"
-                                android:background="@drawable/banff"
                                 android:scaleType="fitXY">
+
+                                <ImageView
+                                    android:id="@+id/ivBanff"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    tools:background="@drawable/banff"
+                                    android:scaleType="centerCrop" />
 
                                 <Button
                                     android:id="@+id/BtnBanff"
@@ -216,15 +222,22 @@
                                 android:textSize="16sp"/>
 
                             <FrameLayout
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="280dp"
                                 android:layout_marginTop="40dp"
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginRight="10dp"
                                 android:layout_marginBottom="10dp"
                                 android:elevation="20dp"
-                                android:background="@drawable/lakelouise"
                                 android:scaleType="fitXY">
+
+                                <ImageView
+                                    android:id="@+id/ivLakeLouise"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/lakelouise"
+                                    tools:background="@drawable/lakelouise"
+                                    android:scaleType="centerCrop" />
 
                                 <Button
                                     android:id="@+id/BtnLouise"
