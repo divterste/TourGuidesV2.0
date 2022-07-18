@@ -3,7 +3,6 @@ package sam.lambton.tourguidesv20
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -13,7 +12,6 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
-import java.util.concurrent.Executor
 import java.util.concurrent.Executors
 
 class WinterActivity : AppCompatActivity() {
@@ -44,11 +42,24 @@ class WinterActivity : AppCompatActivity() {
         }
 
 
-        // Dynamic CardView using Layout Inflation
+        /* Dynamic CardView using Layout Inflation */
 
-        val view : View = LayoutInflater.from(this).inflate(R.layout.cardview, null)
+        //val viewTvFormat : TextView = LayoutInflater.from(this).inflate(R.layout.cardview_title, null) as TextView
+
+        val cardView : View = LayoutInflater.from(this).inflate(R.layout.cardview, null)
         val llWinterCards: LinearLayout = findViewById(R.id.llWinterCards)
-        llWinterCards.addView(view)
+        llWinterCards.addView(LayoutInflater.from(this).inflate(R.layout.cardview_title, null))
+        /*llChildText.text = "Something else"
+        llWinterCards.addView(llChildText as View ,2)*/
+        llWinterCards.addView(cardView)
+
+
+        // Find how many images there are and iterate the process
+
+        val imageURLS = arrayOf("https://i.postimg.cc/G2ZNhnvp/banff.png",
+            "https://i.postimg.cc/W1F7gfLr/image.png",
+            "https://i.postimg.cc/P54YfQYf/edmonton.png")
+
 
         // Setting up the imageview with the background from url
 
@@ -73,10 +84,6 @@ class WinterActivity : AppCompatActivity() {
 
         // Only for Background process (can take time depending on the Internet speed)
         executor.execute {
-
-            val imageURLS = arrayOf("https://i.postimg.cc/G2ZNhnvp/banff.png",
-                "https://i.postimg.cc/W1F7gfLr/image.png",
-            "https://i.postimg.cc/P54YfQYf/edmonton.png")
 
             // Tries to get the image and post it in the ImageView
             // with the help of Handler
