@@ -134,7 +134,7 @@
                 android:scrollbars="none">
 
                 <LinearLayout
-                    android:id="@+id/packagesHorizontal"
+                    android:id="@+id/llWinterCards"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -152,8 +152,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="20dp"
                             app:cardCornerRadius="20dp"
-                            android:elevation="20dp"
-                            android:id="@+id/summerCard">
+                            android:elevation="20dp">
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -179,6 +178,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     tools:background="@drawable/banff"
+                                    android:background="@drawable/banff"
                                     android:scaleType="centerCrop" />
 
                                 <Button
@@ -198,19 +198,18 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:background="#61A4BC"
+                        android:background="#B8FFF9"
                         android:layout_margin="10dp">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="20dp"
                             app:cardCornerRadius="20dp"
-                            android:elevation="20dp"
-                            android:id="@+id/winterCard">
+                            android:elevation="20dp">
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -235,9 +234,9 @@
                                     android:id="@+id/ivLakeLouise"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@drawable/lakelouise"
+                                    android:scaleType="centerCrop"
                                     tools:background="@drawable/lakelouise"
-                                    android:scaleType="centerCrop" />
+                                    android:background="@drawable/lakelouise"/>
 
                                 <Button
                                     android:id="@+id/BtnLouise"
@@ -256,19 +255,18 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:background="#FFE3E3"
+                        android:background="#B8FFF9"
                         android:layout_margin="10dp">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="20dp"
                             app:cardCornerRadius="20dp"
-                            android:elevation="20dp"
-                            android:id="@+id/customCard">
+                            android:elevation="20dp">
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -280,15 +278,22 @@
                                 android:textSize="16sp"/>
 
                             <FrameLayout
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="280dp"
                                 android:layout_marginTop="40dp"
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginRight="10dp"
                                 android:layout_marginBottom="10dp"
                                 android:elevation="20dp"
-                                android:background="@drawable/edmonton"
                                 android:scaleType="fitXY">
+
+                                <ImageView
+                                    android:id="@+id/ivEdmonton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:scaleType="centerCrop"
+                                    tools:background="@drawable/edmonton"
+                                    android:background="@drawable/edmonton"/>
 
                                 <Button
                                     android:id="@+id/BtnEdmonton"
