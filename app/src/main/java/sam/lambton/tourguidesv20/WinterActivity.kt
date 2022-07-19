@@ -9,9 +9,10 @@ import android.os.Handler
 import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.LinearLayout
+import android.widget.*
+import androidx.cardview.widget.CardView
+import androidx.core.view.allViews
+import org.w3c.dom.Text
 import java.util.concurrent.Executors
 
 class WinterActivity : AppCompatActivity() {
@@ -41,18 +42,20 @@ class WinterActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        /* Multiple CardView Loop | .addView customized View */
 
-        /* Dynamic CardView using Layout Inflation */
+        var cardView : View = LayoutInflater.from(this).inflate(R.layout.cardview, null)
+        var llWinterCards: LinearLayout = findViewById(R.id.llWinterCards)
+        var tvChange : TextView
 
-        //val viewTvFormat : TextView = LayoutInflater.from(this).inflate(R.layout.cardview_title, null) as TextView
+        for (i in 1..3) {
+            cardView = LayoutInflater.from(this).inflate(R.layout.cardview, null)
+            tvChange = cardView.findViewById(R.id.tvCustomCardTitle)
 
-        val cardView : View = LayoutInflater.from(this).inflate(R.layout.cardview, null)
-        val llWinterCards: LinearLayout = findViewById(R.id.llWinterCards)
-        llWinterCards.addView(LayoutInflater.from(this).inflate(R.layout.cardview_title, null))
-        /*llChildText.text = "Something else"
-        llWinterCards.addView(llChildText as View ,2)*/
-        llWinterCards.addView(cardView)
+            tvChange.text = "Custom package $i"
 
+            llWinterCards.addView(cardView)
+        }
 
         // Find how many images there are and iterate the process
 

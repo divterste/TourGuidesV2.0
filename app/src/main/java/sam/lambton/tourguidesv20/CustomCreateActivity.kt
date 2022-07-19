@@ -5,6 +5,7 @@ import android.icu.util.Calendar
 import android.os.Build
 import android.os.Bundle
 import android.text.Editable
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
@@ -85,6 +86,26 @@ class CustomCreateActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
         ).also { adapter ->
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             spinnerHotels.adapter = adapter
+        }
+
+        val btnCreatePackage : Button = findViewById(R.id.BtnCreatePackage)
+        btnCreatePackage.setOnClickListener {
+
+
+            /* Code that generates a view iteratively and fixes in into a layout using layout inflation */
+            var cardView : View
+            var llCustomCards: LinearLayout = findViewById(R.id.llCustomCreate)
+            var tvChange : TextView
+
+            for (i in 1..3) {
+                cardView = LayoutInflater.from(this).inflate(R.layout.cardview, null)
+                tvChange = cardView.findViewById(R.id.tvCustomCardTitle)
+
+                tvChange.text = "Custom package $i"
+
+                llCustomCards.addView(cardView)
+            }
+
         }
 
     }
