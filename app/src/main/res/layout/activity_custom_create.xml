@@ -59,6 +59,7 @@
                     android:orientation="vertical">
 
                     <EditText
+                        android:id="@+id/etPackageName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Enter package name"
@@ -68,6 +69,7 @@
                         android:textAlignment="center"/>
 
                     <EditText
+                        android:id="@+id/etPackageDescription"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Enter package description"

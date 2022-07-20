@@ -39,7 +39,7 @@
                 android:scaleType="centerCrop" />
 
             <Button
-                android:id="@+id/BtnBanff"
+                android:id="@+id/btnPackageDetails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Know more"

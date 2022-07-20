@@ -23,6 +23,7 @@ class CustomActivity : AppCompatActivity() {
         btnSeeAllPackages.setOnClickListener {
             //Toast.makeText(this, "Summer clicked", Toast.LENGTH_LONG).show()
             val intent = Intent(applicationContext, CustomSeeAllPackagesActivity::class.java)
+            intent.putExtra("activity", "CustomActivity")
             startActivity(intent)
         }
     }

@@ -1,6 +1,7 @@
 package sam.lambton.tourguidesv20
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.icu.util.Calendar
 import android.os.Build
 import android.os.Bundle
@@ -91,8 +92,7 @@ class CustomCreateActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
         val btnCreatePackage : Button = findViewById(R.id.BtnCreatePackage)
         btnCreatePackage.setOnClickListener {
 
-
-            /* Code that generates a view iteratively and fixes in into a layout using layout inflation */
+            /* Code that generates a view iteratively and fixes in into a layout using layout inflation *//*
             var cardView : View
             var llCustomCards: LinearLayout = findViewById(R.id.llCustomCreate)
             var tvChange : TextView
@@ -104,7 +104,21 @@ class CustomCreateActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
                 tvChange.text = "Custom package $i"
 
                 llCustomCards.addView(cardView)
-            }
+            }*/
+
+            // Create intent to See all custom packages
+
+            val intent = Intent(this, CustomSeeAllPackagesActivity::class.java)
+            intent.putExtra("activity", "CustomCreateActivity")
+            intent.putExtra("packageName", (findViewById<EditText>(R.id.etPackageName).text).toString())
+            intent.putExtra("packageDescription", (findViewById<EditText>(R.id.etPackageDescription).text).toString())
+            intent.putExtra("source", (findViewById<Spinner>(R.id.sourceType).selectedItem).toString())
+            intent.putExtra("destination", (findViewById<Spinner>(R.id.destinationType).selectedItem).toString())
+            intent.putExtra("airlines", (findViewById<Spinner>(R.id.spinnerAirlines).selectedItem).toString())
+            intent.putExtra("hotels", (findViewById<Spinner>(R.id.spinnerHotels).selectedItem).toString())
+            intent.putExtra("startDate", (findViewById<EditText>(R.id.etStartDate).text).toString())
+            intent.putExtra("endDate", (findViewById<EditText>(R.id.etEndDate).text).toString())
+            startActivity(intent)
 
         }
 
