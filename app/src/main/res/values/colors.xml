@@ -11,4 +11,5 @@
     <color name="navy_blue">#205375</color>
     <color name="light_blue">#5584AC</color>
     <color name="btn_color">#235f92</color>
+    <color name="invisible">#8a070707</color>
 </resources>

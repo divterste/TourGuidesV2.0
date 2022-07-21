@@ -2,9 +2,9 @@ package sam.lambton.tourguidesv20
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.view.LayoutInflater
+import android.view.View
+import android.widget.*
 import org.w3c.dom.Text
 
 class CustomDetailsActivity : AppCompatActivity() {
@@ -16,20 +16,50 @@ class CustomDetailsActivity : AppCompatActivity() {
 
         val packageName : TextView = findViewById(R.id.etPackageName)
         val packageDesc : TextView = findViewById(R.id.etPackageDescription)
-        val source : TextView = findViewById(R.id.sourceType)
-        val destination : TextView = findViewById(R.id.destinationType)
-        val airlines : TextView = findViewById(R.id.spinnerAirlines)
-        val hotels : TextView = findViewById(R.id.spinnerHotels)
-        val startDate : TextView = findViewById(R.id.etStartDate)
-        val endDate : TextView = findViewById(R.id.etEndDate)
+
+        /*val source : TextView = findViewById(R.id.source)
+        val destination : TextView = findViewById(R.id.destination)
+        val airlines : TextView = findViewById(R.id.airlines)
+        val hotels : TextView = findViewById(R.id.hotels)
+        val startDate : TextView = findViewById(R.id.startDate)
+        val endDate : TextView = findViewById(R.id.endDate)
 
         packageName.text = intent.getStringExtra("packageName")
         packageDesc.text = intent.getStringExtra("packageDescription")
+
         source.text = intent.getStringExtra("source")
         destination.text = intent.getStringExtra("destination")
         airlines.text = intent.getStringExtra("airlines")
         hotels.text = intent.getStringExtra("hotels")
         startDate.text = intent.getStringExtra("startDate")
-        endDate.text = intent.getStringExtra("endDate")
+        endDate.text = intent.getStringExtra("endDate")*/
+
+        val btnCustomKnowMore : Button = findViewById(R.id.BtnCustomKnowMore)
+        var cardView : View
+        var llCustomCards: LinearLayout = findViewById(R.id.llCustomDetails)
+        var knowMoreShowing: Boolean = false
+
+        btnCustomKnowMore.setOnClickListener {
+
+            cardView = LayoutInflater.from(this).inflate(R.layout.custom_know_more, null)
+
+            if(knowMoreShowing) {
+                llCustomCards.removeView(llCustomCards.findViewById(R.id.llCustomKnowMoreFull))
+                knowMoreShowing = false
+            }
+            else {
+                llCustomCards.addView(cardView)
+
+                cardView.findViewById<TextView>(R.id.source).text = intent.getStringExtra("source")
+                cardView.findViewById<TextView>(R.id.destination).text = intent.getStringExtra("destination")
+                cardView.findViewById<TextView>(R.id.airlines).text = intent.getStringExtra("airlines")
+                cardView.findViewById<TextView>(R.id.hotels).text = intent.getStringExtra("hotels")
+                cardView.findViewById<TextView>(R.id.startDate).text = intent.getStringExtra("startDate")
+                cardView.findViewById<TextView>(R.id.endDate).text = intent.getStringExtra("endDate")
+
+                knowMoreShowing = true
+            }
+
+        }
     }
 }

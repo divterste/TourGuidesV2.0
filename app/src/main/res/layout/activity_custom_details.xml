@@ -1,17 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".CustomDetailsActivity">
 
+
     <LinearLayout
-        android:id="@+id/llCustomCreate"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/edmonton"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/invisible">
+
+        <FrameLayout
+            android:id="@+id/flTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:background="@drawable/background"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clBanner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvExplore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Explore"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:paddingTop="50dp"
+                    android:paddingLeft="20dp"
+                    android:textStyle="bold"
+                    android:textSize="28sp"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:background="@drawable/button_style"
+                    app:backgroundTint="@null"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_margin="10dp"/>
+
+                <HorizontalScrollView
+                    app:layout_constraintTop_toBottomOf="@id/tvExplore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginTop="100dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:text="@string/winter"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:backgroundTint="@color/white"
+                            app:cornerRadius="24dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:text="@string/summer"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:backgroundTint="@color/white"
+                            app:cornerRadius="24dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:text="@string/custom"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:backgroundTint="@color/white"
+                            app:cornerRadius="24dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:text="❄️ Winter"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:backgroundTint="@color/white"
+                            app:cornerRadius="24dp" />
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -22,140 +123,64 @@
             android:id="@+id/summerCard">
 
             <LinearLayout
+                android:id="@+id/llCustomDetails"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:gravity="center">
 
-                <TextView
-                    android:id="@+id/etPackageName"
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Package name"
-                    android:layout_margin="10dp"
-                    android:paddingTop="16dp"
-                    android:paddingBottom="16dp"
-                    android:textSize="20sp"/>
+                    android:layout_height="150dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bgcustom"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:id="@+id/etPackageName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Package name"
+                        android:padding="8dp"
+                        android:textSize="30sp"
+                        tools:text="The Summer Package"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_margin="10dp"/>
+
+                </FrameLayout>
 
                 <TextView
                     android:id="@+id/etPackageDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Package description"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:paddingTop="16dp"
-                    android:paddingBottom="16dp"
+                    android:minHeight="200dp"
+                    android:hint="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
                     android:textSize="18sp"
-                    android:textStyle="italic"/>
+                    android:background="#ECFDF1"
+                    android:textStyle="italic"
+                    android:padding="30dp"
+                    android:layout_marginTop="20dp"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <Button
+                    android:id="@+id/BtnCustomKnowMore"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="5">
+                    android:text="Know more"
+                    android:textColor="@color/black"
+                    android:background="@drawable/button_style_know_more"
+                    app:backgroundTint="@null"
+                    android:layout_margin="20dp"
+                    android:layout_gravity="bottom|right"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="🧍"
-                        android:layout_margin="10dp"
-                        android:paddingTop="16dp"
-                        android:paddingBottom="16dp"
-                        android:textAlignment="center"
-                        android:textSize="20sp"
-                        android:layout_weight="1"/>
-
-                    <TextView
-                        android:id="@+id/sourceType"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="Source"
-                        android:layout_margin="10dp"
-                        android:paddingTop="16dp"
-                        android:paddingBottom="16dp"
-                        android:textAlignment="center"
-                        android:textSize="18sp"
-                        android:layout_weight="1"/>
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp" />
-
-                    <TextView
-                        android:id="@+id/destinationType"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="Destination"
-                        android:layout_margin="10dp"
-                        android:paddingTop="16dp"
-                        android:paddingBottom="16dp"
-                        android:textAlignment="center"
-                        android:textSize="18sp"
-                        android:layout_weight="1"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="🧍"
-                        android:layout_margin="10dp"
-                        android:paddingTop="16dp"
-                        android:paddingBottom="16dp"
-                        android:textAlignment="center"
-                        android:textSize="20sp"
-                        android:layout_weight="1"/>
-
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/spinnerAirlines"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Preferred airline"
-                    android:layout_margin="10dp"
-                    android:paddingTop="16dp"
-                    android:paddingBottom="16dp"
-                    android:textAlignment="center"
-                    android:textSize="18sp"/>
-
-                <TextView
-                    android:id="@+id/spinnerHotels"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Preferred hotels"
-                    android:layout_margin="10dp"
-                    android:paddingTop="16dp"
-                    android:paddingBottom="16dp"
-                    android:textAlignment="center"
-                    android:textSize="18sp"/>
-
-                <TextView
-                    android:id="@+id/etStartDate"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Start date"
-                    android:layout_margin="10dp"
-                    android:paddingTop="16dp"
-                    android:paddingBottom="16dp"
-                    android:textAlignment="center"
-                    android:textSize="18sp"/>
-
-                <TextView
-                    android:id="@+id/etEndDate"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="End date"
-                    android:layout_margin="10dp"
-                    android:paddingTop="16dp"
-                    android:paddingBottom="16dp"
-                    android:textAlignment="center"
-                    android:textSize="18sp"/>
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
