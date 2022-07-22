@@ -5,8 +5,6 @@ import android.content.Intent
 import android.icu.util.Calendar
 import android.os.Build
 import android.os.Bundle
-import android.text.Editable
-import android.view.LayoutInflater
 import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
@@ -45,15 +43,15 @@ class CustomCreateActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
             clickDatePicker(etEndDate)
         }
 
-        val spinner: Spinner = findViewById(R.id.sourceType)
-        spinner.onItemSelectedListener = this
+        val spinnerSource: Spinner = findViewById(R.id.sourceType)
+        spinnerSource.onItemSelectedListener = this
         ArrayAdapter.createFromResource(
             this,
             R.array.source_array,
             android.R.layout.simple_spinner_item
         ).also { adapter ->
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            spinner.adapter = adapter
+            spinnerSource.adapter = adapter
         }
 
         val spinnerDestination: Spinner = findViewById(R.id.destinationType)
@@ -92,32 +90,42 @@ class CustomCreateActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
         val btnCreatePackage : Button = findViewById(R.id.BtnCreatePackage)
         btnCreatePackage.setOnClickListener {
 
-            /* Code that generates a view iteratively and fixes in into a layout using layout inflation *//*
-            var cardView : View
-            var llCustomCards: LinearLayout = findViewById(R.id.llCustomCreate)
-            var tvChange : TextView
-
-            for (i in 1..3) {
-                cardView = LayoutInflater.from(this).inflate(R.layout.cardview, null)
-                tvChange = cardView.findViewById(R.id.tvCustomCardTitle)
-
-                tvChange.text = "Custom package $i"
-
-                llCustomCards.addView(cardView)
-            }*/
-
             // Create intent to See all custom packages
 
             val intent = Intent(this, CustomSeeAllPackagesActivity::class.java)
+            val etPackageName : String = (findViewById<EditText>(R.id.etPackageName).text).toString()
+            val etPackageDescription: String = (findViewById<EditText>(R.id.etPackageDescription).text).toString()
+            val source : String = (spinnerSource.selectedItem).toString()
+            val destination : String = (spinnerDestination.selectedItem).toString()
+            val airline : String = (spinnerAirlines.selectedItem).toString()
+            val hotel : String = (spinnerHotels.selectedItem).toString()
+            val startDate : String = (etStartDate?.text).toString()
+            val endDate : String = (etEndDate?.text).toString()
+
             intent.putExtra("activity", "CustomCreateActivity")
-            intent.putExtra("packageName", (findViewById<EditText>(R.id.etPackageName).text).toString())
-            intent.putExtra("packageDescription", (findViewById<EditText>(R.id.etPackageDescription).text).toString())
-            intent.putExtra("source", (findViewById<Spinner>(R.id.sourceType).selectedItem).toString())
-            intent.putExtra("destination", (findViewById<Spinner>(R.id.destinationType).selectedItem).toString())
-            intent.putExtra("airlines", (findViewById<Spinner>(R.id.spinnerAirlines).selectedItem).toString())
-            intent.putExtra("hotels", (findViewById<Spinner>(R.id.spinnerHotels).selectedItem).toString())
-            intent.putExtra("startDate", (findViewById<EditText>(R.id.etStartDate).text).toString())
-            intent.putExtra("endDate", (findViewById<EditText>(R.id.etEndDate).text).toString())
+            intent.putExtra("packageName", etPackageName)
+            intent.putExtra("packageDescription", etPackageDescription)
+            intent.putExtra("source", source)
+            intent.putExtra("destination", destination)
+            intent.putExtra("airlines", airline)
+            intent.putExtra("hotels", hotel)
+            intent.putExtra("startDate", startDate)
+            intent.putExtra("endDate", endDate)
+
+            /* Persist to database */
+            val databaseHelper: DatabaseHelper = DatabaseHelper(this)
+
+            val packageModel: PackageModel = PackageModel(-1, etPackageName, etPackageDescription, source, destination, airline, hotel, startDate, endDate)
+
+            if(databaseHelper.addPackage(packageModel)){
+                Toast.makeText(this, "Data Insertion successful", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Total rows is ${databaseHelper.howManyPackages()}", Toast.LENGTH_LONG).show()
+            } else {
+                Toast.makeText(this, "Data Insertion failed", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Total rows is ${databaseHelper.howManyPackages()}", Toast.LENGTH_LONG).show()
+            }
+
+            intent.putExtra("ROWS", databaseHelper.howManyPackages())
             startActivity(intent)
 
         }
@@ -169,4 +177,18 @@ class CustomCreateActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
         dpd.show()
     }
 }
+
+/* Code that generates a view iteratively and fixes in into a layout using layout inflation *//*
+            var cardView : View
+            var llCustomCards: LinearLayout = findViewById(R.id.llCustomCreate)
+            var tvChange : TextView
+
+            for (i in 1..3) {
+                cardView = LayoutInflater.from(this).inflate(R.layout.cardview, null)
+                tvChange = cardView.findViewById(R.id.tvCustomCardTitle)
+
+                tvChange.text = "Custom package $i"
+
+                llCustomCards.addView(cardView)
+            }*/
 

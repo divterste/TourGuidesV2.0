@@ -22,38 +22,43 @@ class CustomSeeAllPackagesActivity : AppCompatActivity() {
         var llCustomCards: LinearLayout = findViewById(R.id.llCustomCards)
         var tvChange : TextView
         var customKnowMore : Button? = null
+        val databaseHelper: DatabaseHelper = DatabaseHelper(this)
+        val arrayListPackages: ArrayList<PackageModel>? = databaseHelper.getAllPackages()
 
+        var howManyPackages: Int = 0
 
         if(intent.getStringExtra("activity") == "CustomCreateActivity")
         {
-            cardView = LayoutInflater.from(this).inflate(R.layout.cardview, null)
-            tvChange = cardView.findViewById(R.id.tvCustomCardTitle)
-            customKnowMore = cardView.findViewById(R.id.btnPackageDetails)
+            howManyPackages = databaseHelper.howManyPackages()
 
-            customKnowMore.id = ViewCompat.generateViewId()
-            tvChange.text = intent.getStringExtra("packageName")
+            for (i in 0..howManyPackages) {
+                cardView = LayoutInflater.from(this).inflate(R.layout.cardview, null)
+                tvChange = cardView.findViewById(R.id.tvCustomCardTitle)
 
-            llCustomCards.addView(cardView)
-        }
+                // Change id of the View
+                customKnowMore = cardView.findViewById(R.id.btnPackageDetails)
+                customKnowMore.id = ViewCompat.generateViewId()
 
-        if(customKnowMore != null){
-            customKnowMore.setOnClickListener {
-                //Toast.makeText(this, llCustomCards.findViewById<Button>(customKnowMore.id).text, Toast.LENGTH_SHORT).show()
-                val intentDetails = Intent(this, CustomDetailsActivity::class.java)
-                intentDetails.putExtra("packageName", intent.getStringExtra("packageName"))
-                intentDetails.putExtra("packageDescription", intent.getStringExtra("packageDescription"))
-                intentDetails.putExtra("source", intent.getStringExtra("source"))
-                intentDetails.putExtra("destination", intent.getStringExtra("destination"))
-                intentDetails.putExtra("airlines", intent.getStringExtra("airlines"))
-                intentDetails.putExtra("hotels", intent.getStringExtra("hotels"))
-                intentDetails.putExtra("startDate", intent.getStringExtra("startDate"))
-                intentDetails.putExtra("endDate", intent.getStringExtra("endDate"))
-
-                startActivity(intentDetails)
+                // Change attributes
+                //tvChange.text = intent.getStringExtra("packageName")
+                tvChange.text = arrayListPackages?.get(i)?.packageName
+                llCustomCards.addView(cardView)
             }
         }
-        else {
-            Toast.makeText(this, "null", Toast.LENGTH_LONG).show()
+
+        customKnowMore?.setOnClickListener {
+            //Toast.makeText(this, llCustomCards.findViewById<Button>(customKnowMore.id).text, Toast.LENGTH_SHORT).show()
+            val intentDetails = Intent(this, CustomDetailsActivity::class.java)
+            intentDetails.putExtra("packageName", intent.getStringExtra("packageName"))
+            intentDetails.putExtra("packageDescription", intent.getStringExtra("packageDescription"))
+            intentDetails.putExtra("source", intent.getStringExtra("source"))
+            intentDetails.putExtra("destination", intent.getStringExtra("destination"))
+            intentDetails.putExtra("airlines", intent.getStringExtra("airlines"))
+            intentDetails.putExtra("hotels", intent.getStringExtra("hotels"))
+            intentDetails.putExtra("startDate", intent.getStringExtra("startDate"))
+            intentDetails.putExtra("endDate", intent.getStringExtra("endDate"))
+
+            startActivity(intentDetails)
         }
     }
 }
