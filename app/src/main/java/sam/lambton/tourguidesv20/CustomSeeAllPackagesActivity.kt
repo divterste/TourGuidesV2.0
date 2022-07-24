@@ -23,28 +23,32 @@ class CustomSeeAllPackagesActivity : AppCompatActivity() {
         var tvChange : TextView
         var customKnowMore : Button? = null
         val databaseHelper: DatabaseHelper = DatabaseHelper(this)
-        val arrayListPackages: ArrayList<PackageModel>? = databaseHelper.getAllPackages()
 
-        var howManyPackages: Int = 0
+        var packageVariable: PackageModel? = null
 
-        if(intent.getStringExtra("activity") == "CustomCreateActivity")
-        {
-            howManyPackages = databaseHelper.howManyPackages()
+        var howManyPackages: Int = databaseHelper.howManyPackages()
 
-            for (i in 0..howManyPackages) {
-                cardView = LayoutInflater.from(this).inflate(R.layout.cardview, null)
-                tvChange = cardView.findViewById(R.id.tvCustomCardTitle)
+        /*if (howManyPackages > 0){
+            packageVariable = databaseHelper.getAllPackages()!!
+        }*/
 
-                // Change id of the View
-                customKnowMore = cardView.findViewById(R.id.btnPackageDetails)
-                customKnowMore.id = ViewCompat.generateViewId()
+        var packageModelList = listOf<PackageModel>()
+        packageModelList = databaseHelper.getAllPackages()
 
-                // Change attributes
-                //tvChange.text = intent.getStringExtra("packageName")
-                tvChange.text = arrayListPackages?.get(i)?.packageName
-                llCustomCards.addView(cardView)
-            }
+        for (i in packageModelList) {
+            cardView = LayoutInflater.from(this).inflate(R.layout.cardview, null)
+
+            // Change ids of the Know more of individual packages
+            customKnowMore = cardView.findViewById(R.id.btnPackageDetails)
+            customKnowMore.id = ViewCompat.generateViewId()
+
+            // Change titles of cardViews
+            cardView.findViewById<TextView>(R.id.tvCustomCardTitle).text = i.packageName
+
+            llCustomCards.addView(cardView)
         }
+
+        //Toast.makeText(this, arrayListPackages.toString(), Toast.LENGTH_LONG).show()
 
         customKnowMore?.setOnClickListener {
             //Toast.makeText(this, llCustomCards.findViewById<Button>(customKnowMore.id).text, Toast.LENGTH_SHORT).show()

@@ -50,24 +50,24 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         return count
     }
 
-    fun getAllPackages(): ArrayList<PackageModel>? {
+    fun getAllPackages(): List<PackageModel> {
         val dbRead : SQLiteDatabase = this.readableDatabase
         val cursor : Cursor = dbRead.rawQuery("SELECT * FROM PACKAGE", null)
-        var arrayListPackages : ArrayList<PackageModel>? = null
-        var packageVariable : PackageModel
+
+        val packageModelList = mutableListOf<PackageModel>()
 
         if(cursor.moveToFirst()) {
             do {
                 // Insert all the package objects to an arraylist and then iterate through the arraylist
-                packageVariable = PackageModel(-1, cursor.getString(1), cursor.getString(2),
+                val packageModel : PackageModel = PackageModel(cursor.getInt(0), cursor.getString(1), cursor.getString(2),
                 cursor.getString(3), cursor.getString(4), cursor.getString(5),
                 cursor.getString(6), cursor.getString(7), cursor.getString(8))
 
-                arrayListPackages?.add(packageVariable)
+                packageModelList.add(packageModel)
             } while(cursor.moveToNext())
         }
 
-        return arrayListPackages
+        return packageModelList
     }
 
     fun addSignUp(signUpModel: SignUpModel): Boolean {
