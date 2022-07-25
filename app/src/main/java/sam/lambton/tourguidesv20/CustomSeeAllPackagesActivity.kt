@@ -36,22 +36,28 @@ class CustomSeeAllPackagesActivity : AppCompatActivity() {
         packageModelList = databaseHelper.getAllPackages()
 
         for (i in packageModelList) {
-            cardView = LayoutInflater.from(this).inflate(R.layout.cardview, null)
+            cardView = LayoutInflater.from(this).inflate(R.layout.cardview,  null)
 
             // Change ids of the Know more of individual packages
             customKnowMore = cardView.findViewById(R.id.btnPackageDetails)
-            customKnowMore.id = ViewCompat.generateViewId()
+            customKnowMore?.tag = i.packageName
 
             // Change titles of cardViews
             cardView.findViewById<TextView>(R.id.tvCustomCardTitle).text = i.packageName
 
             llCustomCards.addView(cardView)
+
+            var btnClickKnowMore = llCustomCards.findViewWithTag<Button>(i.packageName)
+
+            btnClickKnowMore.setOnClickListener {
+                Toast.makeText(this, databaseHelper.getPackageWithTag(btnClickKnowMore.tag.toString()), Toast.LENGTH_SHORT).show()
+            }
         }
 
         //Toast.makeText(this, arrayListPackages.toString(), Toast.LENGTH_LONG).show()
 
-        customKnowMore?.setOnClickListener {
-            //Toast.makeText(this, llCustomCards.findViewById<Button>(customKnowMore.id).text, Toast.LENGTH_SHORT).show()
+/*        customKnowMore?.setOnClickListener {
+            Toast.makeText(this, llCustomCards.findViewById<Button>(customKnowMore.id).text, Toast.LENGTH_SHORT).show()
             val intentDetails = Intent(this, CustomDetailsActivity::class.java)
             intentDetails.putExtra("packageName", intent.getStringExtra("packageName"))
             intentDetails.putExtra("packageDescription", intent.getStringExtra("packageDescription"))
@@ -63,6 +69,9 @@ class CustomSeeAllPackagesActivity : AppCompatActivity() {
             intentDetails.putExtra("endDate", intent.getStringExtra("endDate"))
 
             startActivity(intentDetails)
-        }
+
+            Toast.makeText(this, "Button clicked with id ${customKnowMore.id}",
+            Toast.LENGTH_SHORT).show()
+        }*/
     }
 }

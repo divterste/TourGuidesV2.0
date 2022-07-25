@@ -35,6 +35,20 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         return insert != -1L
     }
 
+    fun getPackageWithTag(tagGiven: String): String {
+        val dbRead : SQLiteDatabase = this.readableDatabase
+        val cursor : Cursor = dbRead.rawQuery("SELECT * FROM PACKAGE WHERE NAME=?",
+            arrayOf(tagGiven)
+        )
+
+        return if(cursor.moveToFirst()) {
+            cursor.getString(3)
+        } else {
+            "Error"
+        }
+
+    }
+
     fun howManyPackages(): Int {
 
         val dbRead : SQLiteDatabase = this.readableDatabase
