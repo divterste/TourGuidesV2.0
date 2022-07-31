@@ -3,6 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_ad.xml" value="0.1796875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_adm.xml" value="0.1796875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_admin.xml" value="0.1796875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_admin_index.xml" value="0.1796875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_banff.xml" value="0.1796875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_edmonton.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_final.xml" value="0.1796875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_index.xml" value="0.1796875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_louise.xml" value="0.1796875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_main2.xml" value="0.165625" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_nigara.xml" value="0.1796875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_profile.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_signup.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_test.xml" value="0.1796875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_tofino.xml" value="0.1796875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_woodbine.xml" value="0.1796875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/adminactivity.xml" value="0.17864583333333334" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides_git15/app/src/main/res/layout/activity_nigara.xml" value="0.15579710144927536" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides_git15/app/src/main/res/layout/activity_summer.xml" value="0.15579710144927536" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides_git15/app/src/main/res/layout/activity_woodbine.xml" value="0.15579710144927536" />

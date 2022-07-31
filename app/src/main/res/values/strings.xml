@@ -66,4 +66,19 @@
     <string name="summer">✈ Summer</string>
     <string name="winter">❄ Winter</string>
     <string name="custom">⚙ Custom</string>
+
+    <string name="thanks"><b>Thank you</b></string>
+
+    <string-array name="trip_array">
+        <item>Select trip type</item>
+        <item>Summer</item>
+        <item>Winter</item>
+        <item>Custom</item>
+    </string-array>
+
+    <string-array name="premium_array">
+        <item>Want to become a premium member</item>
+        <item>yes</item>
+        <item>no</item>
+    </string-array>
 </resources>

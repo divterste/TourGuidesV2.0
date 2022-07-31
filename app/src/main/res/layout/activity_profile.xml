@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_margin="10dp"
+        android:background="@color/navy_blue"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/user"
+            android:layout_width="170dp"
+            android:layout_height="160dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/img1"
+            app:layout_constraintStart_toStartOf="@id/hello"
+            app:layout_constraintTop_toBottomOf="@id/hello" />
+        <TextView
+            android:id="@+id/hello"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="250dp"
+            android:fontFamily="sans-serif"
+            android:text="Create your profile here "
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <EditText
+                    android:id="@+id/firstname"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"
+                    android:hint=" 👦First name"
+                    android:background="@drawable/edittextstyle"
+                    android:padding="10dp"
+                    />
+                <EditText
+                    android:id="@+id/lastname"
+                    app:layout_constraintTop_toBottomOf="@id/selectType"
+                    app:layout_constraintStart_toStartOf="@id/user"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"
+                    android:hint=" 👦 Last name"
+                    android:background="@drawable/edittextstyle"
+                    android:padding="10dp"/>
+                <EditText
+                    android:id="@+id/email"
+                    app:layout_constraintTop_toBottomOf="@id/selectType"
+                    app:layout_constraintStart_toStartOf="@id/user"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"
+                    android:hint=" ✉️️ Email"
+                    android:background="@drawable/edittextstyle"
+                    android:padding="10dp"
+                    android:inputType="textEmailAddress"/>
+                <EditText
+                    android:id="@+id/contact"
+                    app:layout_constraintTop_toBottomOf="@id/selectType"
+                    app:layout_constraintStart_toStartOf="@id/user"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"
+                    android:hint=" 📞 Contact"
+                    android:background="@drawable/edittextstyle"
+                    android:padding="10dp"
+                    android:inputType="number"/>
+
+                <Spinner
+                    android:id="@+id/triptype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+
+                    android:background="@drawable/edittextstyle"
+                    android:paddingTop="18dp"
+                    android:paddingBottom="18dp"
+                    android:textAlignment="center" />
+
+                <Spinner
+                    android:id="@+id/premimummeber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittextstyle"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:paddingTop="18dp"
+                    android:paddingBottom="18dp"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/proilesubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:background="@drawable/button_style_know_more"
+                android:layout_gravity="bottom|center"
+                android:layout_margin="20dp"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

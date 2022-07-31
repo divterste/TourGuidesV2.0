@@ -43,66 +43,69 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true">
+
         <ScrollView
+            android:id="@+id/scroolView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/scroolView"
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:background="#8a070707"
-                android:orientation="vertical"
-                android:layout_margin="10dp">
+                android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lake louise, Alberta"
+                    android:layout_marginLeft="40dp"
                     android:layout_marginTop="12dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Lake louise, Alberta"
                     android:textColor="#fff"
                     android:textSize="23dp"
-                    android:textStyle="bold"
-                    android:fontFamily="sans-serif-black"
-                    android:layout_marginLeft="40dp">
-                </TextView>
+                    android:textStyle="bold"></TextView>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="12dp"
                     android:text="$1800"
-                    android:layout_marginTop="12dp"
                     android:textColor="#fff"
-                    android:textSize="20dp"
-                    android:layout_marginLeft="40dp">
-                </TextView>
+                    android:textSize="20dp"></TextView>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="3 Days/ 2 Night"
+                    android:layout_marginLeft="40dp"
                     android:layout_marginTop="12dp"
+                    android:text="3 Days/ 2 Night"
                     android:textColor="#fff"
-                    android:textSize="20dp"
-                    android:layout_marginLeft="40dp">
-                </TextView>
+                    android:textSize="20dp"></TextView>
+
                 <TextView
                     android:id="@+id/description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
                     android:layout_marginLeft="35dp"
+                    android:layout_marginTop="12dp"
                     android:layout_marginRight="35dp"
                     android:text="Lake Louise is a hamlet in Banff National Park in the Canadian Rockies, known for its turquoise, glacier-fed lake ringed by high peaks and overlooked by a stately chateau. Hiking trails wind up to the Lake Agnes Tea House for bird's-eye views. There's a canoe dock in summer, and a skating rink on the frozen lake in winter. The Lake Louise Ski Resort features a wildlife interpretive center at the top of a gondola.The month of October usually brings heavy snowfall in the area, and the Lake Louise Ski Resort usually opens up the first week of November around the same time the lake freezes."
                     android:textColor="@color/white"
-                    android:textSize="16sp">
-                </TextView>
+                    android:textSize="16sp"></TextView>
+
                 <Button
+                    android:id="@+id/btnCall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Book a package"
-                    android:background="@drawable/button_style_know_more"
                     android:layout_gravity="bottom|center"
-                    android:layout_margin="20dp"/>
+                    android:layout_margin="20dp"
+                    android:background="@drawable/button_style_know_more"
+                    android:text="Book a package" />
             </LinearLayout>
         </ScrollView>
     </ScrollView>

@@ -17,7 +17,12 @@ class IndexActivity : AppCompatActivity() {
         val summerKnowMore : Button = findViewById(R.id.summerAll)
         val winterKnowMore : Button = findViewById(R.id.winterAll)
         val custombutton : Button = findViewById(R.id.customAll)
+        val btnProfile : Button = findViewById(R.id.btnProfile)
 
+        btnProfile.setOnClickListener{
+            val intent = Intent(applicationContext, ProfileActivity ::class.java)
+            startActivity(intent)
+        }
 
         summerKnowMore.setOnClickListener {
             //Toast.makeText(this, "Summer clicked", Toast.LENGTH_LONG).show()

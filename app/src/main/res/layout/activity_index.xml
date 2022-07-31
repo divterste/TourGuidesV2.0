@@ -49,6 +49,7 @@
                         android:textColor="@color/black"/>
 
                     <Button
+                        android:id="@+id/btnProfile"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Profile"
@@ -71,7 +72,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <com.google.android.material.button.MaterialButton
+                            <Button
                                 android:id="@+id/mBtnSummer"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -81,8 +82,7 @@
                                 android:textColor="@color/black"
                                 android:backgroundTint="@color/white"
                                 app:cornerRadius="24dp" />
-
-                            <com.google.android.material.button.MaterialButton
+                            <Button
                                 android:id="@+id/mBtnWinter"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -93,7 +93,7 @@
                                 android:backgroundTint="@color/white"
                                 app:cornerRadius="24dp" />
 
-                            <com.google.android.material.button.MaterialButton
+                            <Button
                                 android:id="@+id/mBtnCustom"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
