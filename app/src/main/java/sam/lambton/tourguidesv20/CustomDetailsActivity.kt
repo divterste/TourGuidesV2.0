@@ -1,10 +1,12 @@
 package sam.lambton.tourguidesv20
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.*
+import com.google.android.material.button.MaterialButton
 import org.w3c.dom.Text
 
 class CustomDetailsActivity : AppCompatActivity() {
@@ -60,6 +62,24 @@ class CustomDetailsActivity : AppCompatActivity() {
                 knowMoreShowing = true
             }
 
+        }
+
+        val mBtnSummer: MaterialButton = findViewById(R.id.mBtnSummer)
+        mBtnSummer.setOnClickListener {
+            val intent = Intent(applicationContext, SummerActivity::class.java)
+            startActivity(intent)
+        }
+
+        val mBtnWinter: MaterialButton = findViewById(R.id.mBtnWinter)
+        mBtnWinter.setOnClickListener {
+            val intent = Intent(applicationContext, WinterActivity::class.java)
+            startActivity(intent)
+        }
+
+        val mBtnCustom: MaterialButton = findViewById(R.id.mBtnCustom)
+        mBtnCustom.setOnClickListener {
+            val intent = Intent(applicationContext, CustomActivity::class.java)
+            startActivity(intent)
         }
     }
 }

@@ -72,16 +72,7 @@
                             android:orientation="horizontal">
 
                             <com.google.android.material.button.MaterialButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginRight="20dp"
-                                android:text="@string/winter"
-                                android:textSize="16sp"
-                                android:textColor="@color/black"
-                                android:backgroundTint="@color/white"
-                                app:cornerRadius="24dp" />
-
-                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/mBtnSummer"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="20dp"
@@ -92,6 +83,18 @@
                                 app:cornerRadius="24dp" />
 
                             <com.google.android.material.button.MaterialButton
+                                android:id="@+id/mBtnWinter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:text="@string/winter"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
+                                android:backgroundTint="@color/white"
+                                app:cornerRadius="24dp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/mBtnCustom"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="20dp"

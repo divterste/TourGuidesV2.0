@@ -12,6 +12,7 @@ import android.view.View
 import android.widget.*
 import androidx.cardview.widget.CardView
 import androidx.core.view.allViews
+import com.google.android.material.button.MaterialButton
 import org.w3c.dom.Text
 import java.util.concurrent.Executors
 
@@ -48,13 +49,31 @@ class WinterActivity : AppCompatActivity() {
         var llWinterCards: LinearLayout = findViewById(R.id.llWinterCards)
         var tvChange : TextView
 
-        for (i in 1..3) {
+        /*for (i in 1..3) {
             cardView = LayoutInflater.from(this).inflate(R.layout.cardview, null)
             tvChange = cardView.findViewById(R.id.tvCustomCardTitle)
 
             tvChange.text = "Custom package $i"
 
             llWinterCards.addView(cardView)
+        }*/
+
+        val mBtnSummer: MaterialButton = findViewById(R.id.mBtnSummer)
+        mBtnSummer.setOnClickListener {
+            val intent = Intent(applicationContext, SummerActivity::class.java)
+            startActivity(intent)
+        }
+
+        val mBtnWinter: MaterialButton = findViewById(R.id.mBtnWinter)
+        mBtnWinter.setOnClickListener {
+            val intent = Intent(applicationContext, WinterActivity::class.java)
+            startActivity(intent)
+        }
+
+        val mBtnCustom: MaterialButton = findViewById(R.id.mBtnCustom)
+        mBtnCustom.setOnClickListener {
+            val intent = Intent(applicationContext, CustomActivity::class.java)
+            startActivity(intent)
         }
 
         // Find how many images there are and iterate the process

@@ -71,16 +71,7 @@
                             android:orientation="horizontal">
 
                             <com.google.android.material.button.MaterialButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginRight="20dp"
-                                android:text="@string/winter"
-                                android:textSize="16sp"
-                                android:textColor="@color/black"
-                                android:backgroundTint="@color/white"
-                                app:cornerRadius="24dp" />
-
-                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/mBtnSummer"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="20dp"
@@ -91,6 +82,18 @@
                                 app:cornerRadius="24dp" />
 
                             <com.google.android.material.button.MaterialButton
+                                android:id="@+id/mBtnWinter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:text="@string/winter"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
+                                android:backgroundTint="@color/white"
+                                app:cornerRadius="24dp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/mBtnCustom"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="20dp"
@@ -100,15 +103,6 @@
                                 android:backgroundTint="@color/white"
                                 app:cornerRadius="24dp" />
 
-                            <com.google.android.material.button.MaterialButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginRight="20dp"
-                                android:text="❄️ Winter"
-                                android:textSize="16sp"
-                                android:textColor="@color/black"
-                                android:backgroundTint="@color/white"
-                                app:cornerRadius="24dp" />
 
                         </LinearLayout>
 
@@ -121,26 +115,27 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="BIG WORLD WONDERS"
+                android:text="ABOUT US"
                 android:layout_margin="10dp"
                 android:textSize="20sp"
-                android:textColor="@color/black"
-                android:background="#6ce768"
+                android:textColor="@color/white"
+                android:background="#ee6c4d"
                 android:padding="10dp"
                 android:textAlignment="center"/>
 
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#acf1aa"
+                android:background="#e0fbfc"
                 android:padding="10dp"
                 android:layout_margin="5dp">
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="250dp"
+                    android:layout_height="270dp"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/logo"/>
+                    android:src="@drawable/logo"
+                    android:scaleType="fitXY"/>
 
             </FrameLayout>
 

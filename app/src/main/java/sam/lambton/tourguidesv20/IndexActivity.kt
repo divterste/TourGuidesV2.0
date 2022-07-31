@@ -3,7 +3,10 @@ package sam.lambton.tourguidesv20
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.*
+import androidx.constraintlayout.widget.ConstraintLayout
+import com.google.android.material.button.MaterialButton
 
 class IndexActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,6 +42,24 @@ class IndexActivity : AppCompatActivity() {
 
         custombutton.setOnClickListener {
             //Toast.makeText(this, "Summer clicked", Toast.LENGTH_LONG).show()
+            val intent = Intent(applicationContext, CustomActivity::class.java)
+            startActivity(intent)
+        }
+
+        val mBtnSummer: MaterialButton = findViewById(R.id.mBtnSummer)
+        mBtnSummer.setOnClickListener {
+            val intent = Intent(applicationContext, SummerActivity::class.java)
+            startActivity(intent)
+        }
+
+        val mBtnWinter: MaterialButton = findViewById(R.id.mBtnWinter)
+        mBtnWinter.setOnClickListener {
+            val intent = Intent(applicationContext, WinterActivity::class.java)
+            startActivity(intent)
+        }
+
+        val mBtnCustom: MaterialButton = findViewById(R.id.mBtnCustom)
+        mBtnCustom.setOnClickListener {
             val intent = Intent(applicationContext, CustomActivity::class.java)
             startActivity(intent)
         }

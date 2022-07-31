@@ -10,6 +10,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.view.ViewCompat
+import com.google.android.material.button.MaterialButton
 
 class CustomSeeAllPackagesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -73,5 +74,24 @@ class CustomSeeAllPackagesActivity : AppCompatActivity() {
             Toast.makeText(this, "Button clicked with id ${customKnowMore.id}",
             Toast.LENGTH_SHORT).show()
         }*/
+
+        val mBtnSummer: MaterialButton = findViewById(R.id.mBtnSummer)
+        mBtnSummer.setOnClickListener {
+            val intent = Intent(applicationContext, SummerActivity::class.java)
+            startActivity(intent)
+        }
+
+        val mBtnWinter: MaterialButton = findViewById(R.id.mBtnWinter)
+        mBtnWinter.setOnClickListener {
+            val intent = Intent(applicationContext, WinterActivity::class.java)
+            startActivity(intent)
+        }
+
+        val mBtnCustom: MaterialButton = findViewById(R.id.mBtnCustom)
+        mBtnCustom.setOnClickListener {
+            val intent = Intent(applicationContext, CustomActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
