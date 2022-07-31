@@ -5,6 +5,7 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.widget.Toast
 
 class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
@@ -35,19 +36,57 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         return insert != -1L
     }
 
-    fun getPackageWithTag(tagGiven: String): String {
+
+
+
+
+
+
+
+
+
+
+
+    fun getPackageWithTag(tagGiven: String): MutableList<String> {
         val dbRead : SQLiteDatabase = this.readableDatabase
         val cursor : Cursor = dbRead.rawQuery("SELECT * FROM PACKAGE WHERE NAME=?",
             arrayOf(tagGiven)
         )
+        val result: MutableList<String> = mutableListOf()
 
-        return if(cursor.moveToFirst()) {
+        /*return if(cursor.moveToFirst()) {
             cursor.getString(3)
         } else {
             "Error"
+        }*/
+
+        if(cursor.moveToFirst()) {
+            result.add(cursor.getString(1))
+            result.add(cursor.getString(2))
+            result.add(cursor.getString(3))
+            result.add(cursor.getString(4))
+            result.add(cursor.getString(5))
+            result.add(cursor.getString(6))
+            result.add(cursor.getString(7))
+            result.add(cursor.getString(8))
+        } else {
+            result.add("Error")
         }
 
+        return result
     }
+
+
+
+
+
+
+
+
+
+
+
+
 
     fun howManyPackages(): Int {
 

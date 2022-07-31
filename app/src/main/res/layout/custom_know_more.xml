@@ -26,8 +26,9 @@
                 android:padding="8dp"
                 android:textSize="28sp"
                 tools:text="Additional info"
+                android:text="Additional info"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textColor="#413F42"
                 android:layout_margin="10dp"
                 android:textAlignment="center"
                 android:background="@drawable/button_style_know_more"/>

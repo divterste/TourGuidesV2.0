@@ -22,8 +22,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="350dp"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:background="@drawable/background">
+                app:layout_constraintLeft_toLeftOf="parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:background="@drawable/background"/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/clBanner"
@@ -67,16 +71,7 @@
                             android:orientation="horizontal">
 
                             <com.google.android.material.button.MaterialButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginRight="20dp"
-                                android:text="@string/winter"
-                                android:textSize="16sp"
-                                android:textColor="@color/black"
-                                android:backgroundTint="@color/white"
-                                app:cornerRadius="24dp" />
-
-                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/mBtnSummer"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="20dp"
@@ -87,6 +82,18 @@
                                 app:cornerRadius="24dp" />
 
                             <com.google.android.material.button.MaterialButton
+                                android:id="@+id/mBtnWinter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:text="@string/winter"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
+                                android:backgroundTint="@color/white"
+                                app:cornerRadius="24dp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/mBtnCustom"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="20dp"

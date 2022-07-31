@@ -14,10 +14,13 @@ class CustomDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_custom_details)
 
-        Toast.makeText(this, intent.getStringExtra("packageName"), Toast.LENGTH_LONG).show()
+        //Toast.makeText(this, intent.getStringExtra("packageName"), Toast.LENGTH_LONG).show()
 
         val packageName : TextView = findViewById(R.id.etPackageName)
         val packageDesc : TextView = findViewById(R.id.etPackageDescription)
+        // Set intent value
+        packageName.text = intent.getStringExtra("packageName")
+        packageDesc.text = intent.getStringExtra("packageDescription")
 
         /*val source : TextView = findViewById(R.id.source)
         val destination : TextView = findViewById(R.id.destination)

@@ -39,7 +39,8 @@ class CustomSeeAllPackagesActivity : AppCompatActivity() {
         for (i in packageModelList) {
             cardView = LayoutInflater.from(this).inflate(R.layout.cardview,  null)
 
-            // Change ids of the Know more of individual packages
+            // Make Package Name the TAG of the view
+            //TODO("Make a check if a package name already exists before inserting to database")
             customKnowMore = cardView.findViewById(R.id.btnPackageDetails)
             customKnowMore?.tag = i.packageName
 
@@ -50,9 +51,61 @@ class CustomSeeAllPackagesActivity : AppCompatActivity() {
 
             var btnClickKnowMore = llCustomCards.findViewWithTag<Button>(i.packageName)
 
+
+
+
+
+
+
+
+
+
+
             btnClickKnowMore.setOnClickListener {
-                Toast.makeText(this, databaseHelper.getPackageWithTag(btnClickKnowMore.tag.toString()), Toast.LENGTH_SHORT).show()
+                val packageDetails: MutableList<String> = databaseHelper.getPackageWithTag(btnClickKnowMore.tag.toString())
+                // Set values to intent
+
+                //Toast.makeText(this, packageDetails[0], Toast.LENGTH_SHORT).show()
+
+                val intentDetails = Intent(this, CustomDetailsActivity::class.java)
+                intentDetails.putExtra("packageName", packageDetails[0])
+                intentDetails.putExtra("packageDescription", packageDetails[1])
+                intentDetails.putExtra("source", packageDetails[2])
+                intentDetails.putExtra("destination", packageDetails[3])
+                intentDetails.putExtra("airlines", packageDetails[4])
+                intentDetails.putExtra("hotels", packageDetails[5])
+                intentDetails.putExtra("startDate", packageDetails[6])
+                intentDetails.putExtra("endDate", packageDetails[7])
+
+                startActivity(intentDetails)
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
 
         //Toast.makeText(this, arrayListPackages.toString(), Toast.LENGTH_LONG).show()
