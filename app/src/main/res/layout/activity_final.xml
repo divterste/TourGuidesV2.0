@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".finalActivity">
-    <!--ghjgh-->
+    <!---->
     <FrameLayout
         android:id="@+id/flTop"
         android:layout_width="match_parent"
