@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".finalActivity">
-
+    <!---->
     <FrameLayout
         android:id="@+id/flTop"
         android:layout_width="match_parent"
@@ -62,7 +62,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="Confirmation code"
+            android:text="Confirmation code is 203678"
             android:textColor="@color/black"
             android:textSize="22sp" />
 
