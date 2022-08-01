@@ -76,6 +76,13 @@
         <item>Custom</item>
     </string-array>
 
+    <string-array name="season_array">
+        <item>Select the season</item>
+        <item>Summer</item>
+        <item>Winter</item>
+    </string-array>
+
+
     <string-array name="premium_array">
         <item>Want to become a premium member</item>
         <item>yes</item>

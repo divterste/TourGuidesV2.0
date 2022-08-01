@@ -53,14 +53,6 @@ class CustomSeeAllPackagesActivity : AppCompatActivity() {
 
 
 
-
-
-
-
-
-
-
-
             btnClickKnowMore.setOnClickListener {
                 val packageDetails: MutableList<String> = databaseHelper.getPackageWithTag(btnClickKnowMore.tag.toString())
                 // Set values to intent

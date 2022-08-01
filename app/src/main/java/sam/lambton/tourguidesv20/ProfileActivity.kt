@@ -3,6 +3,7 @@ package sam.lambton.tourguidesv20
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.content.Intent
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
@@ -14,11 +15,11 @@ class ProfileActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-//        val profilebtn : TextView = findViewById(R.id.proilesubmit)
-//        profilebtn.setOnClickListener {
-//            val intent = Intent(applicationContext, editprofieActivity::class.java)
-//            startActivity(intent)
-//        }
+        val btnprofile : TextView = findViewById(R.id.btnProfile)
+        btnprofile.setOnClickListener {
+            val intent = Intent(applicationContext, AdminActivity::class.java)
+            startActivity(intent)
+        }
 
         val profilespinner: Spinner = findViewById(R.id.triptype)
         profilespinner.onItemSelectedListener = this

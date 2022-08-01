@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/drawable-v24/admin_button.xml" value="0.147" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/drawable/button_style.xml" value="0.147" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/drawable/button_style_know_more.xml" value="0.147" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_ad.xml" value="0.1796875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_addpackages.xml" value="0.1796875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_adm.xml" value="0.1796875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_admin.xml" value="0.1796875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_admin_index.xml" value="0.1796875" />
@@ -22,6 +26,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_tofino.xml" value="0.1796875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/activity_woodbine.xml" value="0.1796875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/adminactivity.xml" value="0.17864583333333334" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides31/app/src/main/res/layout/layout.xml" value="0.165625" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides_git15/app/src/main/res/layout/activity_nigara.xml" value="0.15579710144927536" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides_git15/app/src/main/res/layout/activity_summer.xml" value="0.15579710144927536" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TourGuides_git15/app/src/main/res/layout/activity_woodbine.xml" value="0.15579710144927536" />
